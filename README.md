@@ -24,7 +24,7 @@ This is my docker project to host a ghost webapp. I have used MYSQL in the back-
 ![s1](https://user-images.githubusercontent.com/58412342/80857193-c99c2980-8c6d-11ea-8f5c-0052ab9502e3.png)
 #### <h4>6.To start the server :- </h4>
 * run this command in the folder where docker-compose file has been created `docker-compose up`
-![s2](https://user-images.githubusercontent.com/58412342/80857414-9d81a8you 00-8c6f-11ea-9c2e-749d959c2863.png)
+![s2](https://user-images.githubusercontent.com/58412342/80858670-6b287880-8c78-11ea-8720-51d2bb58e7e8.png)
 ![s3](https://user-images.githubusercontent.com/58412342/80857415-a1adc580-8c6f-11ea-8a5f-65158eaadffa.png)
 #### <h4>7.To stop the server :- </h4>
 * to stop the server run this command in same folder where you have created your compose file `docker-compose down` .
