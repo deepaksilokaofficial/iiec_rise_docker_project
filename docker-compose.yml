@@ -1,0 +1,31 @@
+version : '3'
+services :
+  dbos:
+       image: mysql:5.7
+       volumes: 
+               - mysql_storage_new:/var/lib/mysql
+       restart: always
+       environment: 
+               MYSQL_ROOT_PASSWORD: rootpass
+               MYSQL_USER: deepak
+               MYSQL_PASSWORD: redhat
+               MYSQL_DATABASE: mydb
+  ghost:
+      image: ghost:1-alpine
+      restart: always
+      depends_on: 
+                 -dbos
+      ports: 
+            -8081:2368
+      volumes:
+             - ghost_storage_new:/var/lib/ghost
+      environment:
+              database_client: mysql
+              database__connection__host: dbos
+              database__connection__user: deepak
+              database__connection__password: redhat
+              database__connection__database: mydb
+volumes:
+       ghost_storage_new:
+       mysql_storage_new:
+              
